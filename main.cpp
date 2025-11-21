@@ -18,7 +18,6 @@ struct Person {
 int main() {
     dynamic_list_memory_resource mr;
     
-    std::cout << "=== Demonstration with int ===" << std::endl;
     dynamic_array<int> int_arr(&mr);
     
     for (int i = 0; i < 10; ++i) {
@@ -31,7 +30,6 @@ int main() {
     }
     std::cout << std::endl;
     
-    std::cout << "\n=== Demonstration with Person ===" << std::endl;
     dynamic_array<Person> person_arr(&mr);
     
     person_arr.emplace_back("Alice", 25, 50000.0);
@@ -43,7 +41,6 @@ int main() {
         std::cout << "  " << person << std::endl;
     }
     
-    std::cout << "\n=== Iterator demonstration ===" << std::endl;
     auto it = person_arr.begin();
     std::cout << "First person: " << *it << std::endl;
     ++it;
